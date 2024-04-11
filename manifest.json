@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Playlist URL Copy",
+  "description": "An extension to copy YouTube playlist URLs",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "img/avt.png"
+  },
+  "icons": {
+    "16": "img/avt.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["scripts/content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
