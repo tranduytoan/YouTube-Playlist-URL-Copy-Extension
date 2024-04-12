@@ -13,7 +13,9 @@
     "default_icon": "img/avt.png"
   },
   "icons": {
-    "16": "img/avt.png"
+    "16": "img/avt.png",
+    "48": "img/avt.png",
+    "128": "img/avt.png"
   },
   "content_scripts": [
     {
