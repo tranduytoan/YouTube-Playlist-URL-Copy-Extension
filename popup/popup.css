@@ -1,0 +1,13 @@
+body {
+    width: 250px;
+    height: auto;
+    background-color: aquamarine;
+}
+
+#tdt {
+    width: 100%;
+    height: 100%;
+    background-color: #36d5fd;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}

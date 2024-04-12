@@ -6,8 +6,8 @@ chrome.runtime.onMessage.addListener(function(request) {
 
 function getAllUrl() {
   let videoLinks = [];
-  console.log("getAllUrl");
-  document.querySelectorAll("#playlist #container #items a").forEach((link) => {
+  let tdt = document.querySelectorAll("#playlist #container #items a");
+  tdt.forEach((link) => {
     if (link.href.includes("/watch")) {
       videoLinks.push(link.href);
       if (videoLinks.length > 300) {
@@ -16,7 +16,6 @@ function getAllUrl() {
       }
     }
   });
-  console.log("<300");
   copyToClipboard(videoLinks);
 }
 
