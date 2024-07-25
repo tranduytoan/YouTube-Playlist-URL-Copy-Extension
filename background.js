@@ -1,7 +1,7 @@
 chrome.runtime.onInstalled.addListener(function () {
   chrome.contextMenus.create({
     id: "tdt",
-    title: "Copy all video links",
+    title: "Copy playlist's urls",
     targetUrlPatterns: ["https://www.youtube.com/*"]
   });
 });

@@ -1,3 +1,5 @@
+const playlistSelector = "#columns #secondary #secondary-inner #playlist #container #items #playlist-items #wc-endpoint";
+
 chrome.runtime.onMessage.addListener(function(request) {
     if(request.action === 'executeCode') {
         getAllUrl();
@@ -6,14 +8,14 @@ chrome.runtime.onMessage.addListener(function(request) {
 
 function getAllUrl() {
   let videoLinks = [];
-  let tdt = document.querySelectorAll("#playlist #container #items a");
-  tdt.forEach((link) => {
+  let playlist = document.querySelectorAll(playlistSelector);
+  playlist.forEach((link) => {
     if (link.href.includes("/watch")) {
       videoLinks.push(link.href);
-      if (videoLinks.length > 300) {
-        copyToClipboard(videoLinks);
-        return;
-      }
+      // if (videoLinks.length > 300) {
+      //   copyToClipboard(videoLinks);
+      //   return;
+      // }
     }
   });
   copyToClipboard(videoLinks);
